@@ -9,24 +9,59 @@
 }
 
 body {
-    background: #cbf0ab;
+    background: #2a295e;
 }
 
-/* Start quiz button styling */
-.start-quiz {
+.start-quiz, .rules-box {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
+/* Start quiz button styling */
 .start-quiz button {
     font-size: 50px;
     font-weight: 500;
     padding: 10px 15px;
-    color: #cbf0ab;
-    background-color: #344326;
-    border: #344326 5px solid;
+    color: #2a295e;
+    background-color: #cfd6f9;
+    border: #cfd6f9 5px solid;
     border-radius: 5px;
     cursor: pointer;
 }
+
+/* Rules pop up */
+.rules-box {
+    width: 500px;
+    padding: 10px 15px;
+    background: #cdddf8 ;
+    color: #000000;
+    border: 10px inset #cfd6f9;
+    border-radius: 5px;
+}
+
+.rules-box .rules-title {
+    width: 100%;
+    height: 50px;
+    border-bottom: solid 2px ;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 900;
+    font-size: 150%;
+}
+
+.rules-box .rules-list {
+    padding: 20px 30px;
+    font-weight: 700;
+}
+
+.rules {
+    padding: 5px;
+}
+
+.rules span {
+    color: #ad00f2;
+    text-transform: uppercase;
+}
+
