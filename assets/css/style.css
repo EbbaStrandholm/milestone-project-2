@@ -1,5 +1,5 @@
 /* Imported google fonts */
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;600&display=swap');
 
 * {
     margin: 0;
@@ -130,6 +130,7 @@ body {
 .quiz-box header .title {
     font-size: 25px;
     font-weight: 700;
+    margin-left: 20px;
 }
 
 /* Quiz timer */
@@ -139,6 +140,7 @@ body {
     justify-content: space-between;
     width: 200px;
     height: 45px;
+    margin-right: 20px;
     background: #9a9aca;
     border: none;
     border-radius: 4px;
@@ -172,7 +174,7 @@ body {
 
 .quiz-box section .question {
     font-size: 20px;
-    font-weight: 700;
+    font-weight: bolder;
 }
 
 .quiz-box section .answer-list {
@@ -182,4 +184,73 @@ body {
 
 section .answer-list .answer {
     background: #9a9aca;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin-bottom: 20px;
+    font-size: 20x;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+section .answer-list .answer:hover {
+    color: #cfd6f9;
+    background: #2a295e;
+}
+
+.answer-list .answer:last-child {
+    margin-bottom: 0px;
+}
+
+.answer-list .answer .icon {
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    font-size: 25px;
+    pointer-events: none;
+}
+
+/* Quiz box footer */
+.quiz-box footer {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+}
+
+.quiz-box footer .tot-que span {
+    display: flex;
+    user-select: none;
+
+}
+
+footer .tot-que span p {
+    font-weight: 700;
+    padding: 4px;
+}
+
+footer .tot-que span p:first-child {
+    padding-left: 0px;
+}
+
+footer .next {
+    margin: 0 5px;
+    height: 40px;
+    width: 25%;
+    border: #2a295e solid 2px;
+    border-radius: 5px;
+    font-size: 150%;
+    font-weight: 700;
+    color: #2a295e;
+    cursor: pointer;
+}
+
+footer .next:hover {
+    border: #ad00f2 4px solid;
+    color: #ad00f2;
 }
