@@ -12,7 +12,21 @@ body {
     background: #cbf0ab;
 }
 
+/* Start quiz button styling */
 .start-quiz {
     position: absolute;
     top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.start-quiz button {
+    font-size: 50px;
+    font-weight: 500;
+    padding: 10px 15px;
+    color: #cbf0ab;
+    background-color: #344326;
+    border: #344326 5px solid;
+    border-radius: 5px;
+    cursor: pointer;
 }
