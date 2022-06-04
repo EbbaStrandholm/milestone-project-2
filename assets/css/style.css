@@ -106,6 +106,7 @@ body {
     font-size: 160%;
 }
 
+/* Quiz box */
 .quiz-box {
     width: 600px;
     background-color: #cdddf8;
@@ -113,7 +114,10 @@ body {
     border-radius: 5px;
 }
 
+/* Quiz header */
 .quiz-box header {
+    position: relative;
+    z-index: 99;
     height: 60px;
     padding: 10px 10px;
     display: flex;
@@ -128,14 +132,54 @@ body {
     font-weight: 700;
 }
 
+/* Quiz timer */
 .quiz-box header .timer {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 150px;
+    width: 200px;
     height: 45px;
     background: #9a9aca;
     border: none;
     border-radius: 4px;
     padding: 0 5px;
+}
+
+.quiz-box header .timer .timer-text {
+    font-weight: 700;
+    font-size: 15px;
+    user-select: none;
+}
+
+.quiz-box header .timer .timer-sec {
+    font-weight: 900;
+    font-size: 17px;
+    background: #2a295e;
+    color: #cfd6f9;
+    width: 45px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    border: none;
+    border-radius: 5px;
+}
+
+/* Quiz box section */
+.quiz-box section {
+    padding: 20px 30px 20px 30px;
+    background-color: #cdddf8;
+}
+
+.quiz-box section .question {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.quiz-box section .answer-list {
+    padding: 15px 0;
+    display: block;
+}
+
+section .answer-list .answer {
+    background: #9a9aca;
 }
