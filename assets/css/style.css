@@ -26,17 +26,24 @@ body {
     padding: 10px 15px;
     color: #2a295e;
     background-color: #cfd6f9;
-    border: #cfd6f9 5px solid;
+    border: none;
     border-radius: 5px;
     cursor: pointer;
 }
 
+.start-quiz button:hover {
+    border: #ad00f2 4px solid;
+    color: #ad00f2;
+    font-size: 60px;
+}
+
 /* Rules pop up */
 .rules-box {
+    display: none;
     width: 500px;
     padding: 10px 15px;
     background: #cdddf8 ;
-    color: #000000;
+    color: #2a295e;
     border: 10px inset #cfd6f9;
     border-radius: 5px;
 }
@@ -84,4 +91,17 @@ body {
     font-weight: 700;
     color: #2a295e;
     cursor: pointer;
+}
+
+/* Buttons hover */
+.buttons .button-restart:hover {
+    border: #ad00f2 4px solid;
+    color: #ad00f2;
+    font-size: 160%;
+}
+
+.buttons .button-quit:hover {
+    border: #ad00f2 4px solid;
+    color: #ad00f2;
+    font-size: 160%;
 }
