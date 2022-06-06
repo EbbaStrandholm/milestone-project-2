@@ -191,7 +191,7 @@ body {
     background-color: #cdddf8;
 }
 
-.quiz_box section .question {
+.quiz_box section .question_text {
     font-size: 20px;
     font-weight: bolder;
 }
