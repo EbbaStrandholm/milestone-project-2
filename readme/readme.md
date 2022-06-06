@@ -13,7 +13,7 @@ What disease commonly spread on pirate ships? Scurvy
 
 Who was the Ancient Greek God of the Sun? Apollo
 
-What was the name of the crime boss who was head of the feared Chicago Outfit? Al Capone
+How many minutes are in a full week? 10,080
 
 What year was the United Nations established? 1945
 
