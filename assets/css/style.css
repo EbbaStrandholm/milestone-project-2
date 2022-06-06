@@ -12,7 +12,7 @@ body {
     background: #2a295e;
 }
 
-.start-quiz, .rules-box, .quiz-box {
+.start-quiz, .rules-box, .quiz-box, .feedback-box {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -87,7 +87,7 @@ body {
     width: 50%;
     border: #2a295e solid 2px;
     border-radius: 5px;
-    font-size: 150%;
+    font-size: 140%;
     font-weight: 700;
     color: #2a295e;
     cursor: pointer;
@@ -97,13 +97,17 @@ body {
 .buttons .button-restart:hover {
     border: #ad00f2 4px solid;
     color: #ad00f2;
-    font-size: 160%;
+    font-size: 150%;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 .buttons .button-quit:hover {
     border: #ad00f2 4px solid;
     color: #ad00f2;
-    font-size: 160%;
+    font-size: 150%;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 /* Quiz box */
@@ -254,9 +258,64 @@ footer .next {
 footer .next:hover {
     border: #ad00f2 4px solid;
     color: #ad00f2;
+    border-radius: 5px;
 }
 
 /* Feedback box */
 .feedback-box {
     background: #cdddf8;
+    width: 500px;
+    padding: 20px 30px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.feedback-box .icon {
+    font-size: 80px;
+    color: #ad00f2;
+    margin-bottom: 15px;   
+}
+
+.feedback-box .done-text {
+    font-size: 120%;
+    font-weight: 600;
+    color: #2a295e;
+}
+
+.feedback-box .score {
+    font-size: 100%;
+    font-weight: 600;
+    color: #2a295e;
+}
+
+.feedback-box .score span {
+    display: flex;
+    margin: 15px 0;
+}
+
+.feedback-box .score span p {
+    padding: 0 5px;
+    font-weight: 600;
+    color: #ad00f2;
+}
+
+.feedback-box .buttons {
+    height: 50px;
+    display: flex;
+}
+
+.feedback-box .buttons button {
+    margin: 0 5px;
+    height: 50px;
+    width: 150px;
+    border: #2a295e solid 2px;
+    border-radius: 5px;
+    font-size: 140%;
+    font-weight: 700;
+    color: #2a295e;
+    cursor: pointer;
 }
