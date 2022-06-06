@@ -5,7 +5,6 @@ const button_quit = rules_box.querySelector(".buttons .button_quit");
 const button_restart = rules_box.querySelector(".buttons .button_restart");
 const quiz_box = document.querySelector(".quiz_box");
 const next = quiz_box.querySelector(".next");
-const question_counter = quiz_box.querySelector(".tot_que");
 
 //If start quiz button is clicked
 start_button.onclick = ()=>{
@@ -25,16 +24,16 @@ button_restart.onclick = ()=>{
     queCounter(1);
 }
 
-let que_numb = 1;
 let que_count = 0;
+let que_numb = 1;
 
 //If next button is clicked
 next.onclick = ()=>{
     if(que_count < questions.length - 1){
-        showQuestions(que_count);
-        queCounter(que_numb);
         que_count++;
         que_numb++;
+        showQuestions(que_count);
+        queCounter(que_numb);
     }else{
         console.log("Questions completed")
     }
@@ -51,11 +50,29 @@ function showQuestions(index){
                     +'<div class="answer">'+ questions[index].options[3] +'<span></span></div>';
     question_text.innerHTML = que_tag
     answer_list.innerHTML = option_tag
+    const answer = answer_list.querySelectorAll(".answer");
+    for (let i = 0; i < answer.length; i++) {
+        answer[i].setAttribute("onclick", "answerSelected(this)");
+    }
+}
+
+function answerSelected(answer){
+    let userAnswer = answer.textContent;
+    let correctAnswer = questions[que_count].answer;
+    if(userAnswer == correctAnswer){
+        answer.classList.add("correct");
+        console.log("Correct Answer!");
+    }else{
+        answer.classList.add("incorrect");
+        console.log("Incorrect Answer!");
+    }
+
 }
 
 //Question counter
 function queCounter(index){
-    let totQuesCountTag = '<span><p>'+ index +'</p><p>/</p><p>'+ questions.length +'</p><p>questions</p></span>';
-    question_counter.innerHTML = totQuesCountTag;
+    const question_counter = quiz_box.querySelector(".tot_que");
+    let totalQuestCountTag = '<span><p>'+ index +'</p><p>/</p><p>'+ questions.length +'</p><p>questions</p></span>';
+    question_counter.innerHTML = totalQuestCountTag;
 }
 
