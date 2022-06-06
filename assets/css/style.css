@@ -20,7 +20,8 @@ body {
     box-shadow: 0px 5px 10px 0 rgba(0, 0, 0, 0.2);
 }
 
-.rules_box.activeRules{
+.rules_box.activeRules,
+.quiz_box.activeQuiz {
     z-index: 5;
     opacity: 1;
     pointer-events: auto;
@@ -200,7 +201,7 @@ body {
     display: block;
 }
 
-section .answer-list .answer {
+section .answer_list .answer {
     background: #9a9aca;
     border: none;
     border-radius: 5px;
