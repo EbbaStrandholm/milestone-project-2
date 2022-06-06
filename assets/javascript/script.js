@@ -5,6 +5,7 @@ const button_quit = rules_box.querySelector(".buttons .button_quit");
 const button_restart = rules_box.querySelector(".buttons .button_restart");
 const quiz_box = document.querySelector(".quiz_box");
 const next = quiz_box.querySelector(".next");
+const question_counter = quiz_box.querySelector(".tot_que");
 
 //If start quiz button is clicked
 start_button.onclick = ()=>{
@@ -21,21 +22,29 @@ button_restart.onclick = ()=>{
     rules_box.classList.remove("activeRules"); //The rules pop-up window will hide
     quiz_box.classList.add("activeQuiz"); //The quiz window will appear
     showQuestions(0);
+    queCounter(1);
 }
+
+let que_numb = 1;
+let que_count = 0;
 
 //If next button is clicked
 next.onclick = ()=>{
-    que_count++;
-    showQuestions(que_count);
+    if(que_count < questions.length - 1){
+        showQuestions(que_count);
+        queCounter(que_numb);
+        que_count++;
+        que_numb++;
+    }else{
+        console.log("Questions completed")
+    }
 }
-
-let que_count = 0;
 
 //Taking and using questions and answers from array
 function showQuestions(index){
     const question_text = document.querySelector(".question_text");
     const answer_list = document.querySelector(".answer_list");
-    let que_tag = '<span>'+ questions[index].question +'</span>'
+    let que_tag = '<span>'+ questions[index].numb + ". "  + questions[index].question +'</span>'
     let option_tag = '<div class="answer">'+ questions[index].options[0] +'<span></span></div>'
                     +'<div class="answer">'+ questions[index].options[1] +'<span></span></div>'
                     +'<div class="answer">'+ questions[index].options[2] +'<span></span></div>'
@@ -43,3 +52,10 @@ function showQuestions(index){
     question_text.innerHTML = que_tag
     answer_list.innerHTML = option_tag
 }
+
+//Question counter
+function queCounter(index){
+    let totQuesCountTag = '<span><p>'+ index +'</p><p>/</p><p>'+ questions.length +'</p><p>questions</p></span>';
+    question_counter.innerHTML = totQuesCountTag;
+}
+
