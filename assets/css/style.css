@@ -108,6 +108,7 @@ body {
 
 /* Quiz box */
 .quiz-box {
+    display: none;
     width: 600px;
     background-color: #cdddf8;
     color: #2a295e;
@@ -237,6 +238,7 @@ footer .tot-que span p:first-child {
     padding-left: 0px;
 }
 
+/* footer button */
 footer .next {
     margin: 0 5px;
     height: 40px;
@@ -252,4 +254,9 @@ footer .next {
 footer .next:hover {
     border: #ad00f2 4px solid;
     color: #ad00f2;
+}
+
+/* Feedback box */
+.feedback-box {
+    background: #cdddf8;
 }
