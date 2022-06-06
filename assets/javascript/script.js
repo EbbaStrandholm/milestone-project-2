@@ -6,5 +6,10 @@ const button_continue = document.querySelector(".buttons .button_restart");
 
 //If start quiz button is clicked
 start_button.onclick = ()=>{
-    rules_box.classList.add("activeRules");
+    rules_box.classList.add("activeRules"); //The rules pop-up window will show
+}
+
+//If quit quiz button is clicked
+button_quit.onclick = ()=>{
+    rules_box.classList.remove("activeRules"); //The rules pop-up window will hide again
 }
