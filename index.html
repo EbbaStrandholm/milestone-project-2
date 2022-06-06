@@ -10,59 +10,60 @@
     <script src="https://kit.fontawesome.com/f6b99ec6cf.js" crossorigin="anonymous"></script>
 </head>
 <body>
+
     <!-- Start button -->
-    <div class="start-quiz"><button>Start Quiz</button></div>
+    <div class="start_button"><button>Start Quiz</button></div>
 
     <!-- Rules pop-up -->
-    <div class="rules-box">
-        <div class="rules-title">
+    <div class="rules_box">
+        <div class="rules_title">
             <span>rules</span>
         </div>
-        <div class="rules-list">
+        <div class="rules_list">
             <div class="rules">1. You will only have <span>10 seconds</span> per question to choose your answer</div>
             <div class="rules">2. Once an answer has been selected you can't choose another</div>
             <div class="rules">3. Once the quiz has begun you can't exit it</div>
             <div class="rules">4. Your score will show once all questions has been answered</div>
         </div>
         <div class="buttons">
-            <button class="button-quit">Exit</button>
-            <button class="button-restart">Continue</button>
+            <button class="button_quit">Exit</button>
+            <button class="button_restart">Continue</button>
         </div>
     </div>
 
     <!-- Quiz box -->
-    <div class="quiz-box">
+    <div class="quiz_box">
         <header>
             <div class="title">Something Quiz</div>
             <div class="timer">
-                <div class="timer-text">Time remaining</div>
-                <div class="timer-sec">10</div>
+                <div class="timer_text">Time remaining</div>
+                <div class="timer_sec">10</div>
             </div>
         </header>
         <section>
             <div class="question">
-                <span>Question 1</span>
+                <span>What country has the highest life expectancy?</span>
             </div>
-            <div class="answer-list">
+            <div class="answer_list">
                 <div class="answer">
-                    <span>answer 1</span>
+                    <span>Hong Kong</span>
                     <div class="icon correct"><i class="fa-regular fa-circle-check"></i></div>
                 </div>
                 <div class="answer">
-                    <span>answer 2</span>
+                    <span>Japan</span>
                     <div class="icon wrong"><i class="fa-regular fa-circle-xmark"></i></div>
                 </div>
                 <div class="answer">
-                    <span>answer 3</span>
+                    <span>Switzerland</span>
                 </div>
                 <div class="answer">
-                    <span>answer 4</span>
+                    <span>Macao</span>
                 </div>
         </section>
         
         <!-- Quiz box footer -->
         <footer>
-            <div class="tot-que">
+            <div class="tot_que">
                 <span><p>1</p><p>/</p><p>10</p><p>questions</p></span>
             </div>
             <button class="next">Next</button>
@@ -70,25 +71,28 @@
     </div>
 
     <!-- Feedback box -->
-    <div class="feedback-box">
+    <div class="feedback_box">
         <div class="icon">
             <i class="fa-solid fa-award"></i>
         </div>
-        <div class="done-text">
+        <div class="done_text">
             Congratulations! You have completed the Quiz.
         </div>
         <div class="score">
             <span>However, you only got<p>2</p>out of<p>10</p>questions correct...</span>
         </div>
         <div class="buttons">
-            <button class="button-restart">
+            <button class="button_restart">
                 Try Again?
             </button>
-            <button class="button-quit">
+            <button class="button_quit">
                 Exit Quiz
             </button>
         </div>
     </div>
+
+    <!-- JavaScript link -->
+    <script src="assets/javascript/script.js"></script>
 
 </body>
 </html>
