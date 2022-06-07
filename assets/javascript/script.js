@@ -5,6 +5,7 @@ const button_quit = rules_box.querySelector(".buttons .button_quit");
 const button_restart = rules_box.querySelector(".buttons .button_restart");
 const quiz_box = document.querySelector(".quiz_box");
 const next = quiz_box.querySelector(".next");
+const timer_count = quiz_box.querySelector(".timer .timer_sec");
 
 const answer_list = document.querySelector(".answer_list");
 
@@ -24,10 +25,12 @@ button_restart.onclick = ()=>{
     quiz_box.classList.add("activeQuiz"); //The quiz window will appear
     showQuestions(0);
     queCounter(1);
+    startTimer(10);
 };
 
 let que_count = 0;
 let que_numb = 1;
+let counter;
 
 //If next button is clicked
 next.onclick = ()=>{
@@ -67,11 +70,11 @@ function answerSelected(answer){
     if(userAnswer == correctAnswer){
         answer.classList.add("correct");
         console.log("Correct Answer!");
-        answer.insertAdjacmentHTML("beforeend", checkIcon);
+        answer.insertAdjacentHTML("beforeend", checkIcon);
     }else{
         answer.classList.add("incorrect");
         console.log("Incorrect Answer!");
-
+        answer.insertAdjacentHTML("beforeend", xmarkIcon);
         //If the incorrect answer is chosen then the correct one will automatically be chosen
         for (let index = 0; index < allOptions; index++) {
             if(answer_list.children[index].textContent == correctAnswer) {
@@ -83,6 +86,14 @@ function answerSelected(answer){
     //Disable all other options once the user has chosen their answer
     for (let index = 0; index < allOptions; index++) {
         answer_list.children[index].classList.add("disabled");
+    };
+};
+
+function startTimer(time){
+    counter = setInterval(timer, 1000);
+    function timer(){
+        timer_count.textContent = time;
+        time--;
     };
 };
 
