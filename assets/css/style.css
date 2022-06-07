@@ -107,18 +107,10 @@ body {
 }
 
 /* Rules buttons hover */
-.buttons .button_restart:hover {
-    border: #ad00f2 4px solid;
-    color: #ad00f2;
-    font-size: 150%;
-    border-radius: 5px;
-    cursor: pointer;
-}
 
 .buttons .button_quit:hover {
     border: #ad00f2 4px solid;
     color: #ad00f2;
-    font-size: 150%;
     border-radius: 5px;
     cursor: pointer;
 }
