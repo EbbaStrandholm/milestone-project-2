@@ -4,7 +4,6 @@ const rules_box = document.querySelector(".rules_box");
 const button_quit = rules_box.querySelector(".buttons .button_quit");
 const button_restart = rules_box.querySelector(".buttons .button_restart");
 const quiz_box = document.querySelector(".quiz_box");
-const next = quiz_box.querySelector(".next");
 const timer_count = quiz_box.querySelector(".timer .timer_sec");
 
 const answer_list = document.querySelector(".answer_list");
@@ -32,6 +31,12 @@ let que_count = 0;
 let que_numb = 1;
 let counter;
 let time_value = 10;
+let userResult = 0;
+
+const next = quiz_box.querySelector(".next");
+const feedback_box = document.querySelector(".feedback_box");
+const restart_quiz = feedback_box.querySelector(".buttons .button_restart");
+const quit_quiz = feedback_box.querySelector(".buttons .button_quit");
 
 //If next button is clicked
 next.onclick = ()=>{
@@ -45,6 +50,7 @@ next.onclick = ()=>{
         next.style.display = "none";
     }else{
         console.log("Questions completed")
+        showFeedbackBox();
     };
 };
 
@@ -73,6 +79,8 @@ function answerSelected(answer){
     let correctAnswer = questions[que_count].answer;
     let allOptions = answer_list.children.length;
     if(userAnswer == correctAnswer){
+        userResult += 1;
+        console.log(userResult);
         answer.classList.add("correct");
         console.log("Correct Answer!");
         answer.insertAdjacentHTML("beforeend", checkIcon); 
@@ -93,6 +101,24 @@ function answerSelected(answer){
         answer_list.children[index].classList.add("disabled");
     };
     next.style.display = "block";
+};
+
+function showFeedbackBox(){
+    quiz_box.classList.remove("activeQuiz"); //The quiz window will hide
+    feedback_box.classList.add("activeFeedback"); //The feedback window will appear
+    const feedbackText = feedback_box.querySelector(".score");
+    if(userResult > 8){
+        let scoreTag = '<span>You rock! You got<p>'+ userResult +'</p>out of<p>'+ questions.length +'</p>questions correct!</span>';
+        feedbackText.innerHTML = scoreTag;
+    }
+    else if(userResult > 4){
+        let scoreTag = '<span>Very nice, you got<p>'+ userResult +'</p>out of<p>'+ questions.length +'</p>questions correct.</span>';
+        feedbackText.innerHTML = scoreTag;
+    }
+    else{
+        let scoreTag = '<span>However, you only got<p>'+ userResult +'</p>out of<p>'+ questions.length +'</p>questions correct...</span>';
+        feedbackText.innerHTML = scoreTag;
+    };
 };
 
 function startTimer(time){

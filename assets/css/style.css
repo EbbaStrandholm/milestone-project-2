@@ -21,7 +21,8 @@ body {
 }
 
 .rules_box.activeRules,
-.quiz_box.activeQuiz {
+.quiz_box.activeQuiz,
+.feedback_box.activeFeedback {
     z-index: 5;
     opacity: 1;
     pointer-events: auto;
