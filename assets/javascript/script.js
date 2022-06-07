@@ -38,6 +38,24 @@ const feedback_box = document.querySelector(".feedback_box");
 const restart_quiz = feedback_box.querySelector(".buttons .button_restart");
 const quit_quiz = feedback_box.querySelector(".buttons .button_quit");
 
+restart_quiz.onclick = ()=>{
+    feedback_box.classList.remove("activeFeedback");
+    quiz_box.classList.add("activeQuiz");
+    let que_count = 0;
+    let que_numb = 1;
+    let time_value = 10;
+    let userResult = 0;
+    showQuestions(que_count);
+    queCounter(que_numb);
+    clearInterval(counter); //stops the timer from the previous question
+    startTimer(time_value); //starts the timer from the beginning when hext questions appears
+    next.style.display = "none";
+};
+
+quit_quiz.onclick = ()=>{
+    window.location.reload();
+};
+
 //If next button is clicked
 next.onclick = ()=>{
     if(que_count < questions.length - 1){
@@ -62,8 +80,8 @@ function showQuestions(index){
                     +'<div class="answer">'+ questions[index].options[1] +'<span></span></div>'
                     +'<div class="answer">'+ questions[index].options[2] +'<span></span></div>'
                     +'<div class="answer">'+ questions[index].options[3] +'<span></span></div>';
-    question_text.innerHTML = que_tag
-    answer_list.innerHTML = option_tag
+    question_text.innerHTML = que_tag;
+    answer_list.innerHTML = option_tag;
     const answer = answer_list.querySelectorAll(".answer");
     for (let index = 0; index < answer.length; index++) {
         answer[index].setAttribute("onclick", "answerSelected(this)");
@@ -91,7 +109,7 @@ function answerSelected(answer){
         //If the incorrect answer is chosen then the correct one will automatically be chosen
         for (let index = 0; index < allOptions; index++) {
             if(answer_list.children[index].textContent == correctAnswer) {
-                answer_list.children[index].setAttribute("class", "answer correct")
+                answer_list.children[index].setAttribute("class", "answer correct");
             };
         };
     };
@@ -129,6 +147,19 @@ function startTimer(time){
         if(time < 0){
             clearInterval(counter);
             timer_count.textContent = "0";
+
+            let correctAnswer = questions[que_count].answer;
+            let allOptions = answer_list.children.length;
+
+            for (let index = 0; index < allOptions; index++) {
+                if(answer_list.children[index].textContent == correctAnswer) {
+                    answer_list.children[index].setAttribute("class", "answer correct");
+                };
+            };
+            for (let index = 0; index < allOptions; index++) {
+                answer_list.children[index].classList.add("disabled");
+            };
+            next.style.display = "block";
         };
     };
 };
