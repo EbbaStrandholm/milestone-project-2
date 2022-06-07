@@ -11,12 +11,12 @@ const answer_list = document.querySelector(".answer_list");
 //If start quiz button is clicked
 start_button.onclick = ()=>{
     rules_box.classList.add("activeRules"); //The rules pop-up window will show
-}
+};
 
 //If quit quiz button is clicked
 button_quit.onclick = ()=>{
     rules_box.classList.remove("activeRules"); //The rules pop-up window will hide
-}
+};
 
 //If continue quiz button is clicked
 button_restart.onclick = ()=>{
@@ -24,7 +24,7 @@ button_restart.onclick = ()=>{
     quiz_box.classList.add("activeQuiz"); //The quiz window will appear
     showQuestions(0);
     queCounter(1);
-}
+};
 
 let que_count = 0;
 let que_numb = 1;
@@ -38,8 +38,8 @@ next.onclick = ()=>{
         queCounter(que_numb);
     }else{
         console.log("Questions completed")
-    }
-}
+    };
+};
 
 //Taking and using questions and answers from array
 function showQuestions(index){
@@ -54,8 +54,8 @@ function showQuestions(index){
     const answer = answer_list.querySelectorAll(".answer");
     for (let index = 0; index < answer.length; index++) {
         answer[index].setAttribute("onclick", "answerSelected(this)");
-    }
-}
+    };
+};
 
 let checkIcon = '<div class="icon right"><i class="fa-regular fa-circle-check"></i></div>';
 let xmarkIcon = '<div class="icon wrong"><i class="fa-regular fa-circle-xmark"></i></div>';
@@ -76,19 +76,19 @@ function answerSelected(answer){
         for (let index = 0; index < allOptions; index++) {
             if(answer_list.children[index].textContent == correctAnswer) {
                 answer_list.children[index].setAttribute("class", "answer correct")
-            }
-        }
-    }
+            };
+        };
+    };
 
     //Disable all other options once the user has chosen their answer
     for (let index = 0; index < allOptions; index++) {
         answer_list.children[index].classList.add("disabled");
-    }
-}
+    };
+};
 
 //Question counter
 function queCounter(index){
     const question_counter = quiz_box.querySelector(".tot_que");
     let totalQuestCountTag = '<span><p>'+ index +'</p><p>/</p><p>'+ questions.length +'</p><p>questions</p></span>';
     question_counter.innerHTML = totalQuestCountTag;
-}
+};
