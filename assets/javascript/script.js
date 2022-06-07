@@ -132,6 +132,19 @@ function startTimer(time){
         if(time < 0){
             clearInterval(counter);
             timer_count.textContent = "0";
+
+            let correctAnswer = questions[que_count].answer;
+            let allOptions = answer_list.children.length;
+
+            for (let index = 0; index < allOptions; index++) {
+                if(answer_list.children[index].textContent == correctAnswer) {
+                    answer_list.children[index].setAttribute("class", "answer correct")
+                };
+            };
+            for (let index = 0; index < allOptions; index++) {
+                answer_list.children[index].classList.add("disabled");
+            };
+            next.style.display = "block";
         };
     };
 };
