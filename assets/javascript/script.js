@@ -31,6 +31,7 @@ button_restart.onclick = ()=>{
 let que_count = 0;
 let que_numb = 1;
 let counter;
+let time_value = 10;
 
 //If next button is clicked
 next.onclick = ()=>{
@@ -39,6 +40,8 @@ next.onclick = ()=>{
         que_numb++;
         showQuestions(que_count);
         queCounter(que_numb);
+        clearInterval(counter); //stops the timer from the previous question
+        startTimer(time_value); //starts the timer from the beginning when hext questions appears
     }else{
         console.log("Questions completed")
     };
@@ -64,13 +67,14 @@ let checkIcon = '<div class="icon right"><i class="fa-regular fa-circle-check"><
 let xmarkIcon = '<div class="icon wrong"><i class="fa-regular fa-circle-xmark"></i></div>';
 
 function answerSelected(answer){
+    clearInterval(counter); //stops the timer when an answer is chosen 
     let userAnswer = answer.textContent;
     let correctAnswer = questions[que_count].answer;
     let allOptions = answer_list.children.length;
     if(userAnswer == correctAnswer){
         answer.classList.add("correct");
         console.log("Correct Answer!");
-        answer.insertAdjacentHTML("beforeend", checkIcon);
+        answer.insertAdjacentHTML("beforeend", checkIcon); 
     }else{
         answer.classList.add("incorrect");
         console.log("Incorrect Answer!");
