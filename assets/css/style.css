@@ -248,15 +248,21 @@ section .answer_list .answer:hover {
 }
 
 .answer_list .answer.correct {
-    border-color: #2a295e;
-    color: #2a295e;
-    background: #ad00f2;
+    border-color: #80db7b;
+    color: #085e3e;
+    background: #80db7b;
+    transition: ease-in 0.2s;
 }
 
 .answer_list .answer.incorrect {
-    border-color: #ad00f2;
-    color: #ad00f2;
-    background: #9a9aca;
+    border-color: #e6abab;
+    color: #561010;
+    background: #e6abab;
+    transition: ease-in 0.2s;
+}
+
+.answer_list .answer.disabled {
+    pointer-events: none;
 }
 
 /* Quiz box footer */

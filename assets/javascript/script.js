@@ -6,6 +6,8 @@ const button_restart = rules_box.querySelector(".buttons .button_restart");
 const quiz_box = document.querySelector(".quiz_box");
 const next = quiz_box.querySelector(".next");
 
+const answer_list = document.querySelector(".answer_list");
+
 //If start quiz button is clicked
 start_button.onclick = ()=>{
     rules_box.classList.add("activeRules"); //The rules pop-up window will show
@@ -42,7 +44,6 @@ next.onclick = ()=>{
 //Taking and using questions and answers from array
 function showQuestions(index){
     const question_text = document.querySelector(".question_text");
-    const answer_list = document.querySelector(".answer_list");
     let que_tag = '<span>'+ questions[index].numb + ". "  + questions[index].question +'</span>'
     let option_tag = '<div class="answer">'+ questions[index].options[0] +'<span></span></div>'
                     +'<div class="answer">'+ questions[index].options[1] +'<span></span></div>'
@@ -51,22 +52,38 @@ function showQuestions(index){
     question_text.innerHTML = que_tag
     answer_list.innerHTML = option_tag
     const answer = answer_list.querySelectorAll(".answer");
-    for (let i = 0; i < answer.length; i++) {
-        answer[i].setAttribute("onclick", "answerSelected(this)");
+    for (let index = 0; index < answer.length; index++) {
+        answer[index].setAttribute("onclick", "answerSelected(this)");
     }
 }
+
+let checkIcon = '<div class="icon right"><i class="fa-regular fa-circle-check"></i></div>';
+let xmarkIcon = '<div class="icon wrong"><i class="fa-regular fa-circle-xmark"></i></div>';
 
 function answerSelected(answer){
     let userAnswer = answer.textContent;
     let correctAnswer = questions[que_count].answer;
+    let allOptions = answer_list.children.length;
     if(userAnswer == correctAnswer){
         answer.classList.add("correct");
         console.log("Correct Answer!");
+        answer.insertAdjacmentHTML("beforeend", checkIcon);
     }else{
         answer.classList.add("incorrect");
         console.log("Incorrect Answer!");
+
+        //If the incorrect answer is chosen then the correct one will automatically be chosen
+        for (let index = 0; index < allOptions; index++) {
+            if(answer_list.children[index].textContent == correctAnswer) {
+                answer_list.children[index].setAttribute("class", "answer correct")
+            }
+        }
     }
 
+    //Disable all other options once the user has chosen their answer
+    for (let index = 0; index < allOptions; index++) {
+        answer_list.children[index].classList.add("disabled");
+    }
 }
 
 //Question counter
@@ -75,4 +92,3 @@ function queCounter(index){
     let totalQuestCountTag = '<span><p>'+ index +'</p><p>/</p><p>'+ questions.length +'</p><p>questions</p></span>';
     question_counter.innerHTML = totalQuestCountTag;
 }
-
