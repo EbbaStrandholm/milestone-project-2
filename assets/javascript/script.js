@@ -42,6 +42,7 @@ next.onclick = ()=>{
         queCounter(que_numb);
         clearInterval(counter); //stops the timer from the previous question
         startTimer(time_value); //starts the timer from the beginning when hext questions appears
+        next.style.display = "none";
     }else{
         console.log("Questions completed")
     };
@@ -91,6 +92,7 @@ function answerSelected(answer){
     for (let index = 0; index < allOptions; index++) {
         answer_list.children[index].classList.add("disabled");
     };
+    next.style.display = "block";
 };
 
 function startTimer(time){
@@ -101,7 +103,7 @@ function startTimer(time){
         if(time < 0){
             clearInterval(counter);
             timer_count.textContent = "0";
-        }
+        };
     };
 };
 
