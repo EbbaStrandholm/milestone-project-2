@@ -120,6 +120,7 @@ function showFeedbackBox(){
     };
 };
 
+//Timer function, starts counting from 10 every new question
 function startTimer(time){
     counter = setInterval(timer, 1000);
     function timer(){
