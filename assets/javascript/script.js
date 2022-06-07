@@ -38,7 +38,7 @@ const feedback_box = document.querySelector(".feedback_box");
 const quit_quiz = feedback_box.querySelector(".buttons .button_quit");
 
 quit_quiz.onclick = ()=>{
-    window.location.reload()
+    window.location.reload() //Reload the page
 };
 
 //If next button is clicked
@@ -52,7 +52,6 @@ next.onclick = ()=>{
         startTimer(time_value); //starts the timer from the beginning when hext questions appears
         next.style.display = "none";
     }else{
-        console.log("Questions completed")
         showFeedbackBox();
     };
 };
@@ -83,13 +82,10 @@ function answerSelected(answer){
     let allOptions = answer_list.children.length;
     if(userAnswer == correctAnswer){
         userResult += 1;
-        console.log(userResult);
         answer.classList.add("correct");
-        console.log("Correct Answer!");
         answer.insertAdjacentHTML("beforeend", checkIcon); 
     }else{
         answer.classList.add("incorrect");
-        console.log("Incorrect Answer!");
         answer.insertAdjacentHTML("beforeend", xmarkIcon);
         //If the incorrect answer is chosen then the correct one will automatically be chosen
         for (let index = 0; index < allOptions; index++) {

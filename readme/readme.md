@@ -1,5 +1,7 @@
 Quiz questions found and used from https://www.mentimeter.com/blog/audience-energizers/55-free-trivia-and-fun-quiz-question-templates
 
+https://favicon.io/favicon-generator/
+
 <!-- 
 What country has the highest life expectancy? Hong Kong
 
