@@ -98,6 +98,10 @@ function startTimer(time){
     function timer(){
         timer_count.textContent = time;
         time--;
+        if(time < 0){
+            clearInterval(counter);
+            timer_count.textContent = "0";
+        }
     };
 };
 
