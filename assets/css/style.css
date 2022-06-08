@@ -419,13 +419,26 @@ footer .next:hover {
         background: #9a9aca;
         border: none;
         border-radius: 5px;
-        padding: 8px 13px;
+        padding: 5px 10px;
         margin-bottom: 5px;
-        font-size: 15x;
+        font-size: 10px;
         font-weight: 700;
         display: flex;
         align-items: center;
         justify-content: space-between;
+        cursor: pointer;
+    }
+    /* Next button styling */
+    footer .next {
+        display: none;
+        margin: 5px 5px;
+        height: 30px;
+        width: 20%;
+        border: #2a295e solid 2px;
+        border-radius: 5px;
+        font-size: 130%;
+        font-weight: 700;
+        color: #2a295e;
         cursor: pointer;
     }
     .rules_box {
