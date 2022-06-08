@@ -453,6 +453,49 @@ footer .next:hover {
         opacity: 0;
         pointer-events: none;
     }
+    /* Rules title styling */
+    .rules_box .rules_title {
+        width: 100%;
+        height: 40px;
+        border-bottom: solid 2px ;
+        text-transform: uppercase;
+        text-align: center;
+        font-weight: 900;
+        font-size: 130%;
+    }
+    /* Placement of the rules list */
+    .rules_box .rules_list {
+        padding: 10px 20px;
+        font-weight: 700;
+    }
+    .rules {
+        padding: 5px;
+        font-size: 12px;
+    }
+    .rules span {
+        color: #ad00f2;
+        text-transform: uppercase;
+    }
+    /* Rules box buttons styling */
+    .rules_box .buttons button {
+        margin: 0 5px;
+        height: 40px;
+        width: 50%;
+        border: #2a295e solid 2px;
+        border-radius: 4px;
+        font-size: 120%;
+        font-weight: 700;
+        color: #2a295e;
+        cursor: pointer;
+    }
+    /* Rules buttons hover */
+    .buttons .button_quit:hover {
+        border: #ad00f2 4px solid;
+        color: #ad00f2;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    /* Feedback box media query styling */
     .feedback_box {
         background: #cdddf8;
         width: 80%;
