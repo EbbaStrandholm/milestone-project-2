@@ -107,15 +107,15 @@ function showFeedbackBox(){
     feedback_box.classList.add("activeFeedback"); //The feedback window will appear
     const feedbackText = feedback_box.querySelector(".score");
     if(userResult > 8){
-        let scoreTag = '<span>You rock! You got<p>'+ userResult +'</p>out of<p>'+ questions.length +'</p>questions correct!</span>';
+        let scoreTag = '<span>Awesome! You got<p>'+ userResult +'</p>out of<p>'+ questions.length +'</p>correct!</span>';
         feedbackText.innerHTML = scoreTag;
     }
     else if(userResult > 4){
-        let scoreTag = '<span>Very nice, you got<p>'+ userResult +'</p>out of<p>'+ questions.length +'</p>questions correct.</span>';
+        let scoreTag = '<span>Nice! You got<p>'+ userResult +'</p>out of<p>'+ questions.length +'</p>correct.</span>';
         feedbackText.innerHTML = scoreTag;
     }
     else{
-        let scoreTag = '<span>However, you only got<p>'+ userResult +'</p>out of<p>'+ questions.length +'</p>questions correct...</span>';
+        let scoreTag = '<span>You only got<p>'+ userResult +'</p>out of<p>'+ questions.length +'</p>correct :(</span>';
         feedbackText.innerHTML = scoreTag;
     };
 };
