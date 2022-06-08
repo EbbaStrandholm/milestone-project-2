@@ -156,7 +156,7 @@
 <h2> Credits </h2>
     <ul>
         <h3> Code </h3>
-        <li> This video served as a tutorial as I was short on time, it was used as a backbone for the JavaScript and general structure <a href="https://www.youtube.com/watch?v=WUBhpSRS_fk">Code Institute</a> </li>
+        <li> This video served as a tutorial as I was short on time, it was used as a backbone for the JavaScript and general structure <a href="https://www.youtube.com/watch?v=WUBhpSRS_fk">Coding Nepal Quiz Video</a> </li>
     </ul>
     <ul>
         <h3> Content </h3>
