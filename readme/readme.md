@@ -128,37 +128,45 @@
 
 <h2> Lighthouse reports </h2>
 
-![]()
-![]()
-![]()
+![Lighthouse report for computer use](/assets/images/mp2-lighthouse-computer-1.png)
+
+<p>
+    Lighthouse report for computer
+</p>
+
+![Lighthouse report for mobile use](/assets/images/mp2-lighthouse-mobile-1.png)
+
+<p>
+    Lighthouse report for mobile
+</p>
 
 <h2> Deployment </h2>
     <ul>
         <li><h3>Github Pages</h3></li>
             <ol>
-                <li>Log in to <a href="https://github.com/EbbaStrandholm">GitHub</a> and locate the <a href="https://github.com/EbbaStrandholm/milestone-project-1">Repository.</a></li>
+                <li>Log in to <a href="https://github.com/EbbaStrandholm">GitHub</a> and locate the <a href="https://github.com/EbbaStrandholm/milestone-project-2">Repository.</a></li>
                 <li>At the top of the Repository (not top of page), locate the "Settings" Button on the menu. </li>
                 <li>Scroll down the Settings page until you locate the "GitHub Pages" Section.</li>
                 <li>Under "Source", click the dropdown called "None" and select "Master Branch".</li>
                 <li>The page will automatically refresh.</li>
-                <li>Scroll back down through the page to locate the now published site <a href="https://ebbastrandholm.github.io/milestone-project-1/">link</a> in "GitHub Pages".</li>
+                <li>Scroll back down through the page to locate the now published site <a href="https://ebbastrandholm.github.io/milestone-project-2/">link</a> in "GitHub Pages".</li>
             </ol>
     </ul>
 
 <h2> Credits </h2>
     <ul>
         <h3> Code </h3>
-        <li> Some code like the footer, header and form element was referenced from the previous walkthrough project Love Running created by <a href="https://learn.codeinstitute.net/dashboard">Code Institute</a> </li>
+        <li> This video served as a tutorial as I was short on time, it was used as a backbone for the JavaScript and general structure <a href="https://www.youtube.com/watch?v=WUBhpSRS_fk">Code Institute</a> </li>
     </ul>
     <ul>
         <h3> Content </h3>
-        <li> All content was written by the developer </li>
+        <li> The questions and answers was used from this website <a href="https://www.mentimeter.com/blog/audience-energizers/55-free-trivia-and-fun-quiz-question-templates"></a></li>
     </ul>
     <ul>
         <h3> Media </h3>
-        <li> Images were downloaded from <a href="https://pixabay.com/">Pixabay</a> and the background image for signup.html was downloaded from <a href="https://wallpapermemory.com/301713">Wallpapermemory</a> </li>
+        <li> The screenshots taken for the readme are my own, and the favicon was genereate using this website <a href="https://favicon.io/favicon-generator/"></a> </li>
     </ul>
     <ul>
         <h3> Acknowledgement </h3>
-        <li> My mentor, Dario Carrasquel, for awesome and helpful feedback throughout this project </li>
+        <li> My mentor, Dario Carrasquel, for awesome and helpful feedback throughout this project! Thank you! </li>
     </ul>

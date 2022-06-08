@@ -1,3 +1,5 @@
+/* jshint esversion: 6 */
+
 //Adding all required elements
 const start_button = document.querySelector(".start_button button");
 const rules_box = document.querySelector(".rules_box");
