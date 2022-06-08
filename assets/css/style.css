@@ -268,6 +268,7 @@ section .answer_list .answer:hover {
 /* Quiz box footer layout */
 .quiz_box footer {
     height: 50px;
+    margin-bottom: 5px;
     width: 100%;
     display: flex;
     align-items: center;
@@ -292,7 +293,7 @@ footer .tot_que span p:first-child {
 /* Footer next button */
 footer .next {
     display: none;
-    margin: 0 5px;
+    margin: 5px 5px;
     height: 40px;
     width: 25%;
     border: #2a295e solid 2px;
@@ -377,8 +378,9 @@ footer .next:hover {
 
 /* Media queries */
 
-/* For tablet sized screens and below */
+/* For tablet sized screens with max width 800px and below */
 @media screen and (max-width: 800px) {
+    /* Quiz-box media query */
     .quiz_box {
         width: 80% !important;
         margin: auto 0;
@@ -398,6 +400,33 @@ footer .next:hover {
         font-weight: 700;
         font-size: 90%;
         user-select: none;
+    }
+    /* Quiz box section */
+    .quiz_box section {
+        padding: 10px 20px 10px 20px;
+        background-color: #cdddf8;
+    }
+    
+    .quiz_box section .question_text {
+        font-size: 15px;
+        font-weight: bolder;
+    }
+    .quiz_box section .answer_list {
+        padding: 10px 0;
+    }
+    /* The styling of the answers available per question */
+    section .answer_list .answer {
+        background: #9a9aca;
+        border: none;
+        border-radius: 5px;
+        padding: 8px 13px;
+        margin-bottom: 5px;
+        font-size: 15x;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
     }
     .rules_box {
         width: 70%;
