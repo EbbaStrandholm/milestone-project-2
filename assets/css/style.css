@@ -208,7 +208,7 @@ section .answer_list .answer {
     border-radius: 5px;
     padding: 10px 15px;
     margin-bottom: 20px;
-    font-size: 20x;
+    font-size: 20px;
     font-weight: 700;
     display: flex;
     align-items: center;
